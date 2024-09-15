@@ -8,7 +8,7 @@ export const idlFactory = ({ IDL }) => {
     'imageUrl' : IDL.Text,
   });
   return IDL.Service({
-    'createPost' : IDL.Func([IDL.Text, IDL.Text, IDL.Text], [IDL.Nat], []),
+    'createPost' : IDL.Func([IDL.Text, IDL.Text, IDL.Text], [Post], []),
     'getPosts' : IDL.Func([], [IDL.Vec(Post)], ['query']),
     'likePost' : IDL.Func([IDL.Nat], [IDL.Bool], []),
   });

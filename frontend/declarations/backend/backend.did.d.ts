@@ -11,7 +11,7 @@ export interface Post {
   'imageUrl' : string,
 }
 export interface _SERVICE {
-  'createPost' : ActorMethod<[string, string, string], bigint>,
+  'createPost' : ActorMethod<[string, string, string], Post>,
   'getPosts' : ActorMethod<[], Array<Post>>,
   'likePost' : ActorMethod<[bigint], boolean>,
 }
