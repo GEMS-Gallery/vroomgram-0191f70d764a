@@ -1,0 +1,14 @@
+type Post = 
+ record {
+   createdAt: int;
+   description: text;
+   id: nat;
+   imageUrl: text;
+   likes: nat;
+   title: text;
+ };
+service : {
+  createPost: (text, text, text) -> (nat);
+  getPosts: () -> (vec Post) query;
+  likePost: (nat) -> (bool);
+}
